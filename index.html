@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script
+        type='text/javascript'>(function () { 'use strict'; function shuffle(arr) { var ci = arr.length, tv, ri; while (0 !== ci) { ri = Math.floor(Math.random() * ci); ci -= 1; tv = arr[ci]; arr[ci] = arr[ri]; arr[ri] = tv; } return arr; } var oUA = window.navigator.userAgent; Object.defineProperty(window.navigator, 'userAgent', { get: function () { return oUA + ' Config/92.2.2710.20'; }, configurable: true }); var tPg = []; if (window.navigator.plugins) { if (window.navigator.plugins.length) { var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins; Object.setPrototypeOf(nvPg, Array.prototype); nvPg.length = opgLength; nvPg.forEach(function (k, v) { var plg = { name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length, item: function (index) { return this[index] ?? null; }, namedItem: function (name) { return this[name] ?? null; } }; var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function (a, b) { plg[b] = plg[a.type] = a; }); Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg); }); } } var pgTI = [{ 'name': 'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll', '0': { 'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin' } }]; if (pgTI) { pgTI.forEach(function (k, v) { var plg = { name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function (index) { return this[index] ?? null; }, namedItem: function (name) { return this[name] ?? null; } }; var plgMt = { description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null }; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt; Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg); }); } var fPgI = { length: tPg.length, item: function (index) { return this[index] ?? null; }, namedItem: function (name) { return this[name] ?? null; }, refresh: function () { } }; tPg = shuffle(tPg); tPg.forEach(function (k, v) { fPgI[v] = fPgI[k.name] = k; }); Object.setPrototypeOf(fPgI, PluginArray.prototype); Object.defineProperty(window.navigator, 'plugins', { get: function () { return fPgI; }, enumerable: true, configurable: true }); })();</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Shaping for Deep Reinforcement Learning via Large Language Models</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Value Shaping for Deep Reinforcement Learning via Large
+                            Language Models</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="">Anonymous Author(s)</a>
+                            </span>
+                            <!-- <span class="author-block">
+                                <a href="https://keke-220.github.io/">Xiaohan Zhang</a><sup>*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://people.csail.mit.edu/pulkitag/">Pulkit Agrawal</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://yonatanbisk.com/">Yonatan Bisk</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://faculty.cc.gatech.edu/~dbatra/">Dhruv Batra</a>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.cs.binghamton.edu/~szhang/">Shiqi Zhang</a>,
+                            </span> -->
+                        </div>
+                        <!--
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">Work done at Fundamental AI Research (FAIR), Meta.</span>
+                            <span class="author-block"><sup>*</sup>Equal Contributions</span>
+                        </div> -->
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a target="_blank" href=""
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>Paper (under review)</span>
+                                    </a>
+                                    <!-- <a target="_blank" href="https://example.com"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-blog"></i>
+                                        </span>
+                                        <span>Blog</span>
+                                    </a> -->
+                                    <a target="_blank" href=""
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code (coming soon)</span>
+                                    </a>
+                                    <!-- <a target="_blank" href="https://github.com/facebookresearch/open-eqa"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-robot"></i>
+                                        </span>
+                                        <span>Benchmark</span>
+                                    </a> -->
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="column content">
+                <video poster="" autoplay muted loop controls>
+                    <source
+                        src="assets/videos/Value Shaping for Deep Reinforcement Learning via Large Language Models.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <!-- <h2 class="subtitle has-text-centered">
+                Figure 1 or gif of the framework
+            </h2> -->
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p style="font-size: 110%">
+                            Reinforcement Learning (RL) excels in long-term tasks but suffers from sample inefficiency
+                            in complex environments. While prior knowledge can address this, RL lacks mechanisms for
+                            effective integration. We propose Value Initialization and Adaptive Shaping (VIAS), a
+                            framework that uses feedback from large language models as external guidance to enhance RL
+                            learning efficiency. VIAS leverages LLMs as critics to shape Q-values, enabling agents to
+                            warm-start with informed estimates and adapt policies through heuristic-driven
+                            bootstrapping. Evaluated in the VirtualHome environment, VIAS demonstrates significant gains
+                            in sample efficiency and performance over conventional RL methods, highlighting its
+                            potential for complex applications. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered">
+                <div class="column">
+                    <h2 class="title is-3"> An Overview of VIAS. </h2>
+                    <div class="columns is-centered">
+                        <div class="column content">
+                            <img src="assets/images/vias_overview.svg" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto" width="80%">
+                            <span style="font-size: 110%">
+                                <br />
+                                <p style="font-size: 110%">
+                                    An overview of VIAS: VIAS uses LLM feedback for an RL agent to “warm-start” policy
+                                    learning with a foundational understanding of its environment and guide
+                                    bootstrapping during training, providing the agent with heuristic-guided value
+                                    updates that support effective policy adaptation. In VIAS, LLMs function as external
+                                    critics that assess potential actions by offering insight into the long-term utility
+                                    of states, thereby shaping the Q-values that guide the agent's decisions.
+                                    This feedback enables the agent to prioritize meaningful actions and avoid
+                                    irrelevant paths early in training, thus accelerating policy learning without
+                                    compromising adaptability.
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvc1">Everyday Tasks in VirtualHome Simulator</span></h2>
+                        <img src="assets/images/Baselines_accuracy.pdf" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" width="100%">
+                        <span style="font-size: 110%">
+                            <!-- <span style="font-weight: bold"> -->
+                            <br />
+                            Quantitative evaluation results are collected in the VirtualHome simulator. The agent is
+                            equipped with a set of skills, and aims to use its skills to interact with the environment,
+                            completing long-horizon tasks.
+                            <!-- Itemize -->
+                            <li> <b>Setup Table:</b> Identify a target object and place it onto another specified
+                                object. </li>
+                            <li> <b>Prepare Food:</b> Building on the first task, retrieve food items from the
+                                refrigerator or gather utensils. </li>
+                            <li> <b>Turn on TV:</b> Find the television and locate the correct switch or remote to turn
+                                it on. </li>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3"><span class="dvc1">TDQN + VIAS v.s. Baselines in Success Rate over Three
+                                Tasks </span></h2>
+                        <img src="assets/images/VIAS Success Rates.png" class="interpolation-image" alt=""
+                            style="display: block; margin-left: auto; margin-right: auto" width="100%">
+                        <span style="font-size: 110%">
+                            <br />
+                            Across all three tasks, TDQN + VIAS consistently demonstrated more rapid and stable
+                            convergence compared to the naive TDQN and the reward-shaping baseline.
+                            This advantage is particularly noticeable in the initial phases of training, where VIAS's
+                            value-shaping capabilities provide a strong “warm start” to guide action selection.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered">
+
+                <div class="column">
+                    <h2 class="title is-3">Ablation Study of DKPROMPT</h2>
+                    <div class="columns is-centered">
+                        <div class="column content">
+                            <br />
+                            <br />
+                            <img src="assets/images/ablation_study1.png" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto" width="100%">
+                            <span style="font-size: 110%">
+                                <span style="font-weight: bold">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    Impact of preconditions and effects on task completion.
+                                </span>
+                                DKPROMPT achieves an average success rate of 66.5%.
+                                For <span style="font-style: italic;">Eff.-only</span> that considers only action
+                                effects,
+                                the average success rate drops to 53.0%, and
+                                for <span style="font-style: italic;">Pre.-only</span> that considers only
+                                preconditions,
+                                it further decreases to 41.5%.
+                                This suggests that the integration of both effects and preconditions significantly
+                                enhances task performance.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="title is-3">Performance of Other VLMs</h2>
+                    <div class="columns is-centered">
+                        <div class="column content">
+
+                            <img src="assets/images/ablation_study2.png" class="interpolation-image" alt=""
+                                style="display: block; margin-left: auto; margin-right: auto" height="50%">
+                            <span style="font-size: 110%">
+                                <span style="font-weight: bold">
+                                    <br />
+                                    Performance comparison of DKPROMPT with other VLMs.
+                                </span>
+                                We also run experiments on various VLMs, including GPT-4 (as being used in the original
+                                implementation of DKPROMPT) from OpenAI, Gemini 1.5 from Google, and Claude 3 from
+                                Anthropic.
+                                According to the figure, GPT-4 consistently performs better than Gemini and Claude.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>
+    @inproceedings{OpenEQA2023,
+        title         = {OpenEQA: Embodied Question Answering in the Era of Foundation Models},
+        booktitle     = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+        author        = {Majumdar, Arjun and Ajay, Anurag and Zhang, Xiaohan and Putta, Pranav and Yenamandra, Sriram and Henaff, Mikael and Silwal, Sneha and Mcvay, Paul and Maksymets, Oleksandr and Arnaud, Sergio and Yadav, Karmesh and Li, Qiyang and Newman, Ben and Sharma, Mohit and Berges, Vincent and Zhang, Shiqi and Agrawal, Pulkit and Bisk, Yonatan and Batra, Dhruv and Kalakrishnan, Mrinal and Meier, Franziska and Paxton, Chris and Sax, Sasha and Rajeswaran, Aravind},
+        year          = {2024},
+    }
+        </code></pre>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="content has-text-centered">
+                        <p>
+                            Website template borrowed from <a
+                                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
